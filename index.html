@@ -57,16 +57,20 @@
 
     .header {
       margin-bottom: 2.75rem;
+      display: flex;
+      align-items: center;
+      gap: 1.1rem;
     }
 
+    .header-text { flex: 1; }
+
     .avatar {
-      width: 72px;
-      height: 72px;
+      width: 68px;
+      height: 68px;
       border-radius: 50%;
       border: 2px solid var(--accent);
       object-fit: cover;
-      margin-bottom: 1rem;
-      display: block;
+      flex-shrink: 0;
     }
 
     .name {
@@ -161,8 +165,10 @@
   <div class="page">
     <header class="header">
       <img class="avatar" src="avatar.jpg" alt="Don Barger">
-      <h1 class="name">Don <em>Barger</em></h1>
-      <p class="tagline">Working at the intersection of innovation, technology, and faith.</p>
+      <div class="header-text">
+        <h1 class="name">Don <em>Barger</em></h1>
+        <p class="tagline">Working at the intersection of innovation, technology, and faith.</p>
+      </div>
     </header>
 
     <ul class="links" aria-label="Tools and resources">

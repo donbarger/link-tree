@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don Barger — Tools & Resources</title>
+  <style>
+    :root {
+      --ground: #141824;
+      --surface: #1E2436;
+      --surface-hover: #252E44;
+      --accent: #E8A84E;
+      --text-primary: #F2EFE8;
+      --text-muted: #7A8499;
+      --border: #2A3248;
+      --radius: 6px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      background-color: var(--ground);
+    }
+
+    body {
+      background-color: var(--ground);
+      color: var(--text-primary);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 3rem 1.25rem 4rem;
+      position: relative;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='grain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23grain)' opacity='0.06'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 430px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header {
+      margin-bottom: 2.75rem;
+    }
+
+    .name {
+      font-family: Georgia, 'Palatino Linotype', Palatino, serif;
+      font-size: clamp(1.9rem, 7vw, 2.4rem);
+      font-weight: normal;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+      text-wrap: balance;
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+    }
+
+    .name em {
+      color: var(--accent);
+      font-style: normal;
+    }
+
+    .tagline {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 30ch;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      list-style: none;
+    }
+
+    .links li {
+      display: contents;
+    }
+
+    .link-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.14s ease, transform 0.14s ease;
+    }
+
+    .link-card:hover,
+    .link-card:focus-visible {
+      background: var(--surface-hover);
+      transform: translateX(4px);
+      outline: none;
+    }
+
+    .link-card:focus-visible {
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+
+    .card-eyebrow {
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    .card-title {
+      font-family: Georgia, 'Palatino Linotype', Palatino, serif;
+      font-size: 1.1rem;
+      font-weight: normal;
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+      line-height: 1.25;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .link-card {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <h1 class="name">Don <em>Barger</em></h1>
+      <p class="tagline">Working at the intersection of innovation, technology, and faith.</p>
+    </header>
+
+    <ul class="links" aria-label="Tools and resources">
+      <li>
+        <a class="link-card" href="https://www.faithbot.io" target="_blank" rel="noopener noreferrer">
+          <div class="card-eyebrow">Evangelism</div>
+          <div class="card-title">FaithBot</div>
+          <p class="card-desc">An AI tool to help with gospel conversations, available in English.</p>
+        </a>
+      </li>
+      <li>
+        <a class="link-card" href="https://www.faithbot.tools" target="_blank" rel="noopener noreferrer">
+          <div class="card-eyebrow">Discipleship</div>
+          <div class="card-title">FaithBot Tools</div>
+          <p class="card-desc">A collection of evangelism and discipleship tools available in many languages. Don't see yours? Let me know on Teams and we'll add it.</p>
+        </a>
+      </li>
+      <li>
+        <a class="link-card" href="https://www.donbarger.com" target="_blank" rel="noopener noreferrer">
+          <div class="card-eyebrow">Writing</div>
+          <div class="card-title">Articles</div>
+          <p class="card-desc">Thoughts on innovation, technology, and what it means to follow Jesus in a digital world.</p>
+        </a>
+      </li>
+      <li>
+        <a class="link-card" href="https://christianai.donbarger.com" target="_blank" rel="noopener noreferrer">
+          <div class="card-eyebrow">Learning</div>
+          <div class="card-title">Faith & AI</div>
+          <p class="card-desc">A self-study course for Christians who are curious, skeptical, or just getting started with AI.</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

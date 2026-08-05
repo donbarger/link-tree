@@ -1,0 +1,60 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.7.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.7",
+  "serialNumber": "urn:uuid:7a8b8c03-823f-4daf-802b-f535eda1c8df",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-08-05T15:05:38Z",
+    "tools": {
+      "components": [
+        {
+          "type": "application",
+          "author": "anchore",
+          "name": "syft",
+          "version": "1.50.0"
+        }
+      ]
+    },
+    "component": {
+      "bom-ref": "project:link-tree",
+      "type": "application",
+      "name": "link-tree",
+      "version": "unversioned",
+      "description": "link-tree",
+      "supplier": {
+        "name": "Don Barger"
+      },
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://link-tree.donbarger.com"
+        }
+      ]
+    },
+    "supplier": {
+      "name": "Don Barger"
+    },
+    "authors": [
+      {
+        "name": "Don Barger"
+      }
+    ],
+    "properties": [
+      {
+        "name": "donbarger:sbom:package-source",
+        "value": "repository working copy"
+      },
+      {
+        "name": "donbarger:sbom:companion",
+        "value": "SBOM.md \u2014 human-readable companion; authoritative for rationale and risk"
+      },
+      {
+        "name": "donbarger:sbom:deployed-at",
+        "value": "https://link-tree.donbarger.com"
+      }
+    ]
+  },
+  "components": [],
+  "dependencies": []
+}
